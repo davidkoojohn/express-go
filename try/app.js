@@ -3,6 +3,14 @@ var express = require('express')
 
 var app = express()
 
+
+var birds = require('./routes/index');
+
+app.use('/', birds);
+
+
+
+/*
 app.get('/', function (req, res) {
   res.send('Hello express')
 })
@@ -27,9 +35,9 @@ var cb1 = function (req, res, next) {
 
 var cb2 = function (req, res) {
   res.send('Hello from C!');
-}
+}*/
 
-app.get('/example/c', [cb0, cb1, cb2]);
+//app.get('/example/c', [cb0, cb1, cb2]);
 
 
 var server = app.listen(7777, function () {
