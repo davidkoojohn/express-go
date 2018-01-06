@@ -10,6 +10,7 @@
     </style>
 </head>
 <body>
+<%- include('./share/header') %>
 <h1><%= name.toUpperCase() %></h1>
 <p>hello, <%= name %></p>
 <p>hello, <%- html %></p>
@@ -18,5 +19,6 @@
     <li><%= supplies[i] %></li>
   <% } %>
 </ul>
+<%- include('./share/footer') %>
 </body>
 </html>
