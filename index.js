@@ -6,10 +6,15 @@ app.get('/', function (req, res) {
   res.send('hello, express')
 })
 
-app.get('/users/:name', function (req, res) {
+app.get('/users', function (req, res) {
   // req.params
-  console.log(req.params)
-  res.send('hello, ' + req.params.name)
+  // console.log(req.params)
+  // res.send('hello, ' + req.params.name)
+
+  // req.query
+  console.log(req.query)
+  res.send('hello, ' + req.query.name)
+
 })
 
 
